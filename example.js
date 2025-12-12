@@ -1,4 +1,4 @@
-require("dotenv").config(); // Load env vars fron .env file
+require("dotenv").config(); // To load env files
 
 const express = require("express");
 const app = express();
@@ -10,7 +10,7 @@ app.post("/register", (req, res) => {
 const { name, email } = req.body;
 if (!name || !emall) return res.status(400).json({ error: "Missing fields" });
 
-// Simulate DB save
+// To simulate the DB save
 
 res.status(201).json({ message: 'Hello: $(name) ($(email))' });
 });
